@@ -97,7 +97,7 @@ const signup = (e) => {
     //creates users by hitting the end point
     $('.signUpSpinner').show();
     $('.signUpBtn').hide();
-    axios.post('https://phelbbackend.herokuapp.com/users', { name: name.value, email: email.value, password: password.value })
+    axios.post('https://phelbbackend.herokuapp.com/users', { name: name.value, email: email.value, password: password.value,accountType:"student" })
         .then((res) => {
             $('.signUpSpinner').hide();
             $('.signUpBtn').show();
